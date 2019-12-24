@@ -9,6 +9,8 @@ import top.hiasenna.community.dto.AccessTokenDTO;
 import top.hiasenna.community.dto.GithubUser;
 import top.hiasenna.community.provider.GithubProvider;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @ClassName AuthorizeController
  * @Description T0D0
@@ -26,10 +28,12 @@ public class AuthorizeController {
     private String clientSecret;
     @Value("${github.redirect.url}")
     private String redirectUrl;
+
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
-                           @RequestParam(name = "state") String state) {
-        AccessTokenDTO accessTokenDTO= new AccessTokenDTO();
+                           @RequestParam(name = "state") String state,
+                           HttpServletRequest request) {
+        AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
         accessTokenDTO.setCode(code);
@@ -37,9 +41,16 @@ public class AuthorizeController {
         accessTokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser user = githubProvider.getUser(accessToken);
-        System.out.println(user.getName());
+        if (user != null) {
+            //登录成功，写cookie和session
+            request.getSession().setAttribute("user", user);
+            return "redirect:/";
 
-        return "index";
+
+        } else {
+            //登录失败，重新登录
+            return "redirect:/";
+        }
     }
 }
 
