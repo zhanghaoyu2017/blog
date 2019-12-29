@@ -10,7 +10,7 @@ package top.hiasenna.community.model;
 public class Question {
     private Integer id;
     private String title;
-    private  String daecription;
+    private  String description;
     private String tag;
     private Long gmtCreate;
     private Long gmtModified;
@@ -35,12 +35,12 @@ public class Question {
         this.title = title;
     }
 
-    public String getDaecription() {
-        return daecription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDaecription(String daecription) {
-        this.daecription = daecription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getTag() {
