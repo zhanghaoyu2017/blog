@@ -1,16 +1,17 @@
-package top.hiasenna.community.model;
+package top.hiasenna.community.dto;
 
 import lombok.Data;
+import top.hiasenna.community.model.User;
 
 /**
- * @ClassName Question
+ * @ClassName QuestionDTO
  * @Description T0D0
  * @Author zhanghaoyu
- * @Date 2019/12/2911:53
+ * @Date 2019/12/3019:17
  * @Version 1.0
  **/
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private String title;
     private  String description;
@@ -21,4 +22,5 @@ public class Question {
     private Integer viewCount;
     private Integer commentCount;
     private Integer likeCount;
+    private User user;
 }
