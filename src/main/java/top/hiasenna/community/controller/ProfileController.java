@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import top.hiasenna.community.dto.PaginationDTO;
 import top.hiasenna.community.mapper.UserMapper;
 import top.hiasenna.community.model.User;
 import top.hiasenna.community.service.QuestionService;
@@ -32,7 +33,7 @@ public class ProfileController {
                           @PathVariable(name = "action") String action,
                           Model model,
                           @RequestParam(name = "page", defaultValue = "1") Integer page,
-                          @RequestParam(name = "size", defaultValue = "2") Integer size) {
+                          @RequestParam(name = "size", defaultValue = "4") Integer size) {
         User user = null;
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length != 0) {
@@ -59,7 +60,8 @@ public class ProfileController {
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");
         }
-        questionService.list(user.getId(), page, size);
+        PaginationDTO paginationDTO = questionService.list(user.getId(), page, size);
+        model.addAttribute("pagination", paginationDTO);
         return "profile";
     }
 }
