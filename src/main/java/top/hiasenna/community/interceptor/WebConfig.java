@@ -21,7 +21,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @Configuration
-@EnableWebMvc
+//@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
