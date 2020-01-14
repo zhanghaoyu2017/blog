@@ -8,6 +8,7 @@ import top.hiasenna.community.dto.QuestionDTO;
 import top.hiasenna.community.mapper.QuestionMapper;
 import top.hiasenna.community.mapper.UserMapper;
 import top.hiasenna.community.model.Question;
+import top.hiasenna.community.model.QuestionExample;
 import top.hiasenna.community.model.User;
 
 import java.util.ArrayList;
@@ -30,7 +31,8 @@ public class QuestionService {
     public PaginationDTO list(Integer page, Integer size) {
         Integer totalPage;
         PaginationDTO paginationDTO = new PaginationDTO();
-        Integer totalCount = questionMapper.count();
+        QuestionExample example = new QuestionExample();
+        Integer totalCount = (int)questionMapper.countByExample(example);
         if (totalCount % size == 0) {
             totalPage = totalCount / size;
         } else {
@@ -44,11 +46,12 @@ public class QuestionService {
         }
         paginationDTO.setPagination(totalPage, page);
         Integer offset = size * (page - 1);
-        List<Question> questions = questionMapper.list(offset, size);
+        QuestionExample example1 = new QuestionExample();
+        List<Question> questions = questionMapper.selectByExample(example1);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
-            User user = userMapper.findById(question.getCreator());
+            User user = userMapper.selectByPrimaryKey(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
             //快速拷贝 复制
             BeanUtils.copyProperties(question, questionDTO);
@@ -85,7 +88,7 @@ public class QuestionService {
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
-            User user = userMapper.findById(question.getCreator());
+            User user = userMapper.selectByPrimaryKey(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
             //快速拷贝 复制
             BeanUtils.copyProperties(question, questionDTO);
@@ -102,7 +105,7 @@ public class QuestionService {
         Question question = questionMapper.getById(id);
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question, questionDTO);
-        User user = userMapper.findById(question.getCreator());
+        User user = userMapper.selectByPrimaryKey(question.getCreator());
         questionDTO.setUser(user);
         return questionDTO;
     }
