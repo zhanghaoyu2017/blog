@@ -8,6 +8,7 @@ import top.hiasenna.community.dto.PaginationDTO;
 import top.hiasenna.community.dto.QuestionDTO;
 import top.hiasenna.community.exception.CustomizeErrorCode;
 import top.hiasenna.community.exception.CustomizeException;
+import top.hiasenna.community.mapper.QuestionExtMapper;
 import top.hiasenna.community.mapper.QuestionMapper;
 import top.hiasenna.community.mapper.UserMapper;
 import top.hiasenna.community.model.Question;
@@ -30,6 +31,8 @@ public class QuestionService {
     private QuestionMapper questionMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
         Integer totalPage;
@@ -141,11 +144,9 @@ public class QuestionService {
     }
 
     public void incView(Integer id) {
-        Question question = questionMapper.selectByPrimaryKey(id);
-        Question updateQuestion = new Question();
-        updateQuestion.setViewCount(question.getViewCount()+1);
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.createCriteria().andIdEqualTo(id);
-        questionMapper.updateByExampleSelective(updateQuestion, questionExample);
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
