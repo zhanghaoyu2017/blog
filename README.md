@@ -7,5 +7,6 @@
 [ES社区](https://elasticsearch.cn/)<br>
 [GitHub OAuth Document](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)<br>
 
-工具
+脚本
 ----
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
