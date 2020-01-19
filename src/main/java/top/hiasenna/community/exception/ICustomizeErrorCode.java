@@ -9,6 +9,6 @@ package top.hiasenna.community.exception;
  **/
 public interface ICustomizeErrorCode {
     String getMessage();
-
+    Integer getCode();
 
 }
