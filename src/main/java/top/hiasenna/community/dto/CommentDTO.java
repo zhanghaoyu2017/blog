@@ -1,19 +1,24 @@
 package top.hiasenna.community.dto;
 
 import lombok.Data;
-
-import javax.swing.*;
+import top.hiasenna.community.model.User;
 
 /**
  * @ClassName CommentDTO
  * @Description T0D0
  * @Author zhanghaoyu
- * @Date 2020/1/17-19:43
+ * @Date 2020/1/22-15:56
  * @Version 1.0
  **/
 @Data
 public class CommentDTO {
+    private Long id;
     private Long parentId;
-    private String content;
     private Integer type;
+    private Long commentator;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Long likeCount;
+    private String content;
+    private User user;
 }

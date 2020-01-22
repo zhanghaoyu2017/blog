@@ -3,17 +3,14 @@ package top.hiasenna.community.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import top.hiasenna.community.dto.CommentDTO;
+import top.hiasenna.community.dto.CommentCreateDTO;
 import top.hiasenna.community.dto.ResultDTO;
 import top.hiasenna.community.exception.CustomizeErrorCode;
-import top.hiasenna.community.mapper.CommentMapper;
 import top.hiasenna.community.model.Comment;
 import top.hiasenna.community.model.User;
 import top.hiasenna.community.service.CommentService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @ClassName CommentController
@@ -29,7 +26,7 @@ public class CommentController {
 
     @ResponseBody
     @RequestMapping(value = "/comment", method = RequestMethod.POST)
-    public Object post(@RequestBody CommentDTO commentDTO, HttpServletRequest request) {
+    public Object post(@RequestBody CommentCreateDTO commentDTO, HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
