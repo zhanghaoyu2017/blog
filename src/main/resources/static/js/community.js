@@ -5,7 +5,7 @@ function post() {
 }
 function comment2target(targetId, type, content) {
     if (!content) {
-        alert("不能回复空内容~~~");
+        alert("不能回复空内容");
         return;
     }
 

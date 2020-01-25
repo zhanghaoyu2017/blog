@@ -34,6 +34,7 @@ body {
 .community-menu {
     font-size: 13px;
     color: #999;
+    display: block;
 }
 
 .jumbotron {
@@ -52,7 +53,9 @@ body {
 .comment_sp {
     margin-top: 0;
 }
-
+.question-title{
+    margin-top: 25px;
+}
 .menu {
     margin-top: 5px;
     color: #999999;
