@@ -5,13 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import top.hiasenna.community.dto.CommentCreateDTO;
+import top.hiasenna.community.dto.CommentDTO;
 import top.hiasenna.community.dto.ResultDTO;
+import top.hiasenna.community.enums.CommentTypeEnum;
 import top.hiasenna.community.exception.CustomizeErrorCode;
 import top.hiasenna.community.model.Comment;
 import top.hiasenna.community.model.User;
 import top.hiasenna.community.service.CommentService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @ClassName CommentController
@@ -45,5 +48,13 @@ public class CommentController {
         comment.setLikeCount(0L);
         commentService.insert(comment);
         return ResultDTO.okOf();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+    public ResultDTO<List> comments(@PathVariable(name = "id") Long id) {
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+
+        return ResultDTO.okOf(commentDTOS);
     }
 }
