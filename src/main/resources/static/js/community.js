@@ -3,6 +3,13 @@ function post() {
     var content = $("#comment_content").val();
     comment2target(questionId, 1, content);
 }
+
+/**
+ * 提交回复
+ * @param targetId
+ * @param type
+ * @param content
+ */
 function comment2target(targetId, type, content) {
     if (!content) {
         alert("不能回复空内容");
@@ -35,4 +42,22 @@ function comment2target(targetId, type, content) {
         },
         dataType: "json"
     });
+}
+
+/**
+ * 展开二级评论
+ */
+function collapseComments(e) {
+    var id = e.getAttribute("data");
+    var comments = $("#comment-"+id);
+    //展开或折叠二级评论
+    comments.toggleClass("in");
+    //展开评论 图标保持高亮
+    if (comments.hasClass("in")){
+        e.classList.add("active");
+    } else {
+        e.classList.remove("active");
+    }
+
+
 }
