@@ -70,7 +70,7 @@ body {
     font-size: 15px;
     cursor: pointer;
 }
-.menu .comment-icon:hover {
+.menu .comment-icon :hover {
     color: #499ef3;
 }
 .menu .active {
@@ -95,4 +95,19 @@ body {
 }
 .sub-comments .btn{
     margin: 10px 0;
+}
+.question-tag{
+    margin-right: 5px;
+}
+.question-related{
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+    list-style: none;
+}
+.question-wechat{
+    width: 85%;
+    height: 85%;
 }
