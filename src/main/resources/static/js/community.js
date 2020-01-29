@@ -107,6 +107,18 @@ function collapseComments(e) {
     } else {
         e.classList.remove("active");
     }
-
-
+}
+function showSelectTag() {
+    $("#select-tag").show();
+}
+function selectTag(e) {
+    var value = e.getAttribute("data");
+    var previous = $("#tag").val();
+    if (previous.indexOf(value) == -1) {
+        if (previous) {
+            $("#tag").val(previous + ',' + value);
+        } else {
+            $("#tag").val(value);
+        }
+    }
 }
