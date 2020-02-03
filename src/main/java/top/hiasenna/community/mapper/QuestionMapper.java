@@ -3,6 +3,7 @@ package top.hiasenna.community.mapper;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
+import top.hiasenna.community.dto.QuestionQueryDTO;
 import top.hiasenna.community.model.Question;
 import top.hiasenna.community.model.QuestionExample;
 
