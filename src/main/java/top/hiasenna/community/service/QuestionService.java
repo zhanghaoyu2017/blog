@@ -39,10 +39,10 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
-    public PaginationDTO list(String search,Integer page, Integer size) {
-        if (StringUtils.isNotBlank(search)){
-          String[] tags = StringUtils.split(search,"");
-          search= Arrays.stream(tags).collect(Collectors.joining("|"));
+    public PaginationDTO list(String search, Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, "");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
 
         }
         Integer totalPage;
@@ -62,7 +62,7 @@ public class QuestionService {
             page = totalPage;
         }
         paginationDTO.setPagination(totalPage, page);
-        Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
         questionQueryDTO.setSize(size);
