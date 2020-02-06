@@ -3,6 +3,7 @@
 <head>
     <title>问答社区</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="css/community.css"/>
@@ -38,7 +39,7 @@
                         <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
 
                     </h4>
-                    <span th:text="${question.description}"></span><br/>
+                    <!--<span th:text="${question.description}"></span><br/>-->
                     <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 · <span
                             th:text="${question.viewCount}"></span> 次浏览 · <span
                             th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
@@ -48,37 +49,43 @@
             <nav aria-label="Page navigation">
                 <ul class="pagination">
                     <li th:if="${pagination.showFirstPage}">
-                        <a href="/?page=1" aria-label="Previous">
+                        <a th:href="@{/(page=1,search=${search},tag=${tag})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;&lt;</span>
                         </a>
                     </li>
                     <li th:if="${pagination.showPreviousPage}">
-                        <a th:href="@{/(page=${pagination.page - 1},search=${search})}" aria-label="Previous">
+                        <a th:href="@{/(page=${pagination.page - 1},search=${search},tag=${tag})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;</span>
                         </a>
                     </li>
 
                     <li th:each="page: ${pagination.pages}" th:class="${pagination.page==page}?'active':''">
-                        <a th:href="@{/(page=${page},search=${search})}" th:text="${page}"></a>
+                        <a th:href="@{/(page=${page},search=${search},tag=${tag})}" th:text="${page}"></a>
                     </li>
                     <li th:if="${pagination.showNextPage}">
-                        <a th:href="@{/(page=${pagination.page+1},search=${search})}" aria-label="Previous">
+                        <a th:href="@{/(page=${pagination.page+1},search=${search},tag=${tag})}" aria-label="Previous">
                             <span aria-hidden="true">&gt;</span>
                         </a>
                     </li>
                     <li th:if="${pagination.showEndPage}">
-                        <a th:href="@{/(page=${pagination.totalPage},search=${search})}" aria-label="Previous">
+                        <a th:href="@{/(page=${pagination.totalPage},search=${search},tag=${tag})}" aria-label="Previous">
                             <span aria-hidden="true">&gt;&gt;</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h3>官方微信</h3>
                 <img src="/images/wechat.jpg" class="img-thumbnail question-wechat" alt=""/>
+            </div>
+            <!--相关问题-->
+            <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>热门标签</h4>
+                <a th:each="tag : ${tags}" th:href="@{/(page=1,search=${search},tag=${tag})}"
+                   th:text="${tag}" class="community-tag"></a>
             </div>
         </div>
     </div>

@@ -107,8 +107,8 @@ body {
     list-style: none;
 }
 .question-wechat{
-    width: 85%;
-    height: 85%;
+    width: 50%;
+    height: 50%;
 }
 .publish-tag-tab {
     display: none;
