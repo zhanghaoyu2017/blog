@@ -10323,3 +10323,774 @@ Caused by: java.lang.ClassNotFoundException: top.hiasenna.community.service.Ques
 2020-02-07 00:13:22.754  INFO 11208 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2020-02-07 00:13:22.755  INFO 11208 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2020-02-07 00:13:22.779  INFO 11208 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2020-02-07 00:16:19.853  INFO 11208 --- [Thread-16] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@335a2036: startup date [Fri Feb 07 00:13:08 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:19.856  INFO 11208 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 00:16:21.731  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 11208 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 00:16:21.732  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 00:16:21.734  INFO 11208 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61c22f75: startup date [Fri Feb 07 00:16:21 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:22.512  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 00:16:22.512  INFO 11208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 00:16:22.513  INFO 11208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 00:16:22.559  INFO 11208 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 00:16:22.560  INFO 11208 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 826 ms
+2020-02-07 00:16:22.591  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 00:16:22.591  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 00:16:22.591  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 00:16:22.591  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 00:16:22.591  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 00:16:22.592  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 00:16:22.832  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61c22f75: startup date [Fri Feb 07 00:16:21 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:22.840  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:22.840  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:22.840  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 00:16:22.841  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:22.841  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:22.841  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:22.842  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 00:16:22.842  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 00:16:22.842  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 00:16:22.843  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 00:16:22.843  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:22.845  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:22.847  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:22.854  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:22.854  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:22.860  INFO 11208 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 00:16:22.864  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:23.070  INFO 11208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 00:16:23.097  INFO 11208 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 00:16:23.102  INFO 11208 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 00:16:23.103  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 00:16:23 GMT+08:00 2020
+2020-02-07 00:16:23.114  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 00:16:23.115  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.445 seconds (JVM running for 197.441)
+2020-02-07 00:16:26.184  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 00:16:26.184  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 00:16:26.184  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 00:16:26.184  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 00:16:26.185  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 00:16:26.224  INFO 11208 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 00:16:26 GMT+08:00 2020
+2020-02-07 00:16:39.387  INFO 11208 --- [Thread-25] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61c22f75: startup date [Fri Feb 07 00:16:21 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:39.389  INFO 11208 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 00:16:41.607  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 11208 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 00:16:41.607  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 00:16:41.613  INFO 11208 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33376388: startup date [Fri Feb 07 00:16:41 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:42.710  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 00:16:42.711  INFO 11208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 00:16:42.711  INFO 11208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 00:16:42.759  INFO 11208 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 00:16:42.760  INFO 11208 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1147 ms
+2020-02-07 00:16:42.791  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 00:16:42.791  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 00:16:42.792  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 00:16:42.792  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 00:16:42.792  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 00:16:42.792  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 00:16:43.149  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33376388: startup date [Fri Feb 07 00:16:41 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:43.162  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:43.163  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:43.163  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 00:16:43.163  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:43.164  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:43.164  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:43.165  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 00:16:43.165  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 00:16:43.166  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 00:16:43.167  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 00:16:43.167  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:43.168  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:43.168  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:43.181  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:43.181  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:43.197  INFO 11208 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 00:16:43.202  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:43.470  INFO 11208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 00:16:43.501  INFO 11208 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 00:16:43.506  INFO 11208 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 00:16:43.507  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 00:16:43 GMT+08:00 2020
+2020-02-07 00:16:43.520  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 00:16:43.522  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.996 seconds (JVM running for 217.849)
+2020-02-07 00:16:46.510  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 00:16:46.510  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 00:16:46.510  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 00:16:46.510  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 00:16:46.510  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 00:16:46.545  INFO 11208 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 00:16:46 GMT+08:00 2020
+2020-02-07 00:16:47.617  INFO 11208 --- [Thread-32] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33376388: startup date [Fri Feb 07 00:16:41 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:47.618  INFO 11208 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 00:16:49.064  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 11208 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 00:16:49.065  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 00:16:49.066  INFO 11208 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c8d094: startup date [Fri Feb 07 00:16:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:49.667  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 00:16:49.667  INFO 11208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 00:16:49.667  INFO 11208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 00:16:49.713  INFO 11208 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 00:16:49.714  INFO 11208 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 648 ms
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 00:16:49.742  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 00:16:49.977  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c8d094: startup date [Fri Feb 07 00:16:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:49.988  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:49.988  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:49.988  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 00:16:49.989  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:49.989  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:49.991  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:49.991  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 00:16:49.992  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 00:16:49.992  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 00:16:49.993  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 00:16:49.993  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:49.993  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:49.993  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:50.001  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:50.001  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:50.006  INFO 11208 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 00:16:50.010  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:50.284  INFO 11208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 00:16:50.316  INFO 11208 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 00:16:50.321  INFO 11208 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 00:16:50.322  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 00:16:50 GMT+08:00 2020
+2020-02-07 00:16:50.331  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 00:16:50.333  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.305 seconds (JVM running for 224.658)
+2020-02-07 00:16:53.373  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 00:16:53.373  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 00:16:53.373  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 00:16:53.373  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 00:16:53.373  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 00:16:53.410  INFO 11208 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 00:16:53 GMT+08:00 2020
+2020-02-07 00:16:55.663  INFO 11208 --- [Thread-39] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c8d094: startup date [Fri Feb 07 00:16:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:55.664  INFO 11208 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 00:16:57.223  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 11208 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 00:16:57.223  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 00:16:57.225  INFO 11208 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77e6c09: startup date [Fri Feb 07 00:16:57 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:57.850  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 00:16:57.851  INFO 11208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 00:16:57.851  INFO 11208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 00:16:57.896  INFO 11208 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 00:16:57.897  INFO 11208 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 672 ms
+2020-02-07 00:16:57.923  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 00:16:57.924  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 00:16:57.924  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 00:16:57.924  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 00:16:57.924  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 00:16:57.924  INFO 11208 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 00:16:58.137  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77e6c09: startup date [Fri Feb 07 00:16:57 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 00:16:58.143  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:58.144  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 00:16:58.144  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 00:16:58.144  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:58.144  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:58.145  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 00:16:58.145  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 00:16:58.145  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 00:16:58.146  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 00:16:58.146  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 00:16:58.146  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 00:16:58.146  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:58.147  INFO 11208 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 00:16:58.153  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:58.153  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:58.159  INFO 11208 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 00:16:58.163  INFO 11208 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 00:16:58.388  INFO 11208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 00:16:58.414  INFO 11208 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 00:16:58.419  INFO 11208 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 00:16:58.420  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 00:16:58 GMT+08:00 2020
+2020-02-07 00:16:58.430  INFO 11208 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 00:16:58.430  INFO 11208 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.244 seconds (JVM running for 232.756)
+2020-02-07 00:17:02.725  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 00:17:02.725  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 00:17:02.726  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 00:17:02.726  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 00:17:02.726  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 00:17:02.762  INFO 11208 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 00:17:02 GMT+08:00 2020
+2020-02-07 12:20:16.287  INFO 15176 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 15176 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:20:16.326  INFO 15176 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:20:16.808  INFO 15176 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b5489b7: startup date [Fri Feb 07 12:20:16 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:20:22.110  INFO 15176 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:20:22.122  INFO 15176 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:20:22.123  INFO 15176 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:20:22.346  INFO 15176 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:20:22.346  INFO 15176 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5544 ms
+2020-02-07 12:20:22.540  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:20:22.541  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:20:22.545  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:20:22.545  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:20:22.546  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:20:22.546  INFO 15176 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:20:23.989  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b5489b7: startup date [Fri Feb 07 12:20:16 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:20:24.094  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:20:24.095  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:20:24.097  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:20:24.098  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:20:24.099  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:20:24.101  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:20:24.102  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 12:20:24.103  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:20:24.103  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:20:24.106  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:20:24.107  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:20:24.108  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:20:24.109  INFO 15176 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:20:24.161  INFO 15176 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:20:24.161  INFO 15176 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:20:24.184  INFO 15176 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:20:24.224  INFO 15176 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:20:25.662  INFO 15176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:20:25.738  INFO 15176 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:20:25.764  INFO 15176 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:20:25.770  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:20:25 GMT+08:00 2020
+2020-02-07 12:20:25.857  INFO 15176 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:20:25.865  INFO 15176 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 10.126 seconds (JVM running for 13.868)
+2020-02-07 12:20:29.922  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:20:29.923  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:20:29.923  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:20:29.923  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:20:29.923  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:20:29.961  INFO 15176 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:20:29 GMT+08:00 2020
+2020-02-07 12:20:36.602  INFO 15176 --- [http-nio-8887-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-07 12:20:36.602  INFO 15176 --- [http-nio-8887-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-07 12:20:36.634  INFO 15176 --- [http-nio-8887-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2020-02-07 12:21:39.635  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:21:39.636  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:21:39.891  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624023cc: startup date [Fri Feb 07 12:21:39 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:21:41.821  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:21:41.837  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:21:41.838  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:21:42.049  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:21:42.049  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2162 ms
+2020-02-07 12:21:42.220  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:21:42.221  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:21:42.224  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:21:42.225  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:21:42.225  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:21:42.225  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:21:43.428  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624023cc: startup date [Fri Feb 07 12:21:39 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:21:43.484  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:21:43.486  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:21:43.486  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:21:43.487  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:21:43.487  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:21:43.488  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:21:43.488  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2020-02-07 12:21:43.489  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:21:43.489  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:21:43.491  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:21:43.491  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:21:43.492  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:21:43.492  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:21:43.527  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:21:43.528  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:21:43.546  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:21:43.570  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:21:44.399  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:21:44.440  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:21:44.458  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:21:44.465  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:21:44 GMT+08:00 2020
+2020-02-07 12:21:44.508  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:21:44.515  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 5.222 seconds (JVM running for 8.554)
+2020-02-07 12:21:45.447  INFO 18944 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-07 12:21:45.447  INFO 18944 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-07 12:21:45.471  INFO 18944 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2020-02-07 12:21:50.831  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:21:50.831  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:21:50.832  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:21:50.832  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:21:50.832  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:21:50.876  INFO 18944 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:21:50 GMT+08:00 2020
+2020-02-07 12:22:44.118  INFO 18944 --- [Thread-17] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@624023cc: startup date [Fri Feb 07 12:21:39 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:44.122  INFO 18944 --- [Thread-17] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:22:46.793  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:22:46.793  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:22:46.797  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@472d2f01: startup date [Fri Feb 07 12:22:46 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:47.867  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:22:47.869  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:22:47.869  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:22:47.926  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:22:47.927  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1130 ms
+2020-02-07 12:22:47.969  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:22:47.969  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:22:47.970  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:22:47.970  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:22:47.970  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:22:47.970  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:22:48.275  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@472d2f01: startup date [Fri Feb 07 12:22:46 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:48.287  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:22:48.288  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:22:48.289  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:22:48.289  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:22:48.290  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:22:48.290  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:22:48.291  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:22:48.292  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:22:48.293  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:22:48.293  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:22:48.293  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:22:48.294  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:22:48.304  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:22:48.304  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:22:48.312  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:22:48.318  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:22:48.564  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:22:48.607  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:22:48.615  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:22:48.617  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:22:48 GMT+08:00 2020
+2020-02-07 12:22:48.632  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:22:48.635  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.959 seconds (JVM running for 72.673)
+2020-02-07 12:22:52.765  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:22:52.766  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:22:52.767  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:22:52.767  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:22:52.767  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:22:52.805  INFO 18944 --- [pool-3-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:22:52 GMT+08:00 2020
+2020-02-07 12:22:56.168  INFO 18944 --- [Thread-26] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@472d2f01: startup date [Fri Feb 07 12:22:46 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:56.170  INFO 18944 --- [Thread-26] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:22:58.211  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:22:58.211  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:22:58.213  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5115cd2c: startup date [Fri Feb 07 12:22:58 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:59.402  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:22:59.402  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:22:59.402  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:22:59.457  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:22:59.458  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1245 ms
+2020-02-07 12:22:59.499  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:22:59.500  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:22:59.500  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:22:59.500  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:22:59.500  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:22:59.500  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:22:59.734  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5115cd2c: startup date [Fri Feb 07 12:22:58 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:22:59.742  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:22:59.742  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:22:59.743  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:22:59.743  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:22:59.744  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:22:59.744  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:22:59.744  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:22:59.745  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:22:59.745  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:22:59.746  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:22:59.746  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:22:59.746  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:22:59.753  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:22:59.753  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:22:59.762  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:22:59.767  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:00.022  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:23:00.065  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:23:00.074  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:23:00.075  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:23:00 GMT+08:00 2020
+2020-02-07 12:23:00.088  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:23:00.089  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.934 seconds (JVM running for 84.128)
+2020-02-07 12:23:03.247  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:23:03.248  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:23:03.248  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:23:03.248  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:23:03.248  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:23:03.293  INFO 18944 --- [pool-5-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:23:03 GMT+08:00 2020
+2020-02-07 12:23:17.363  INFO 18944 --- [Thread-33] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5115cd2c: startup date [Fri Feb 07 12:22:58 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:17.364  INFO 18944 --- [Thread-33] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:23:18.862  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:23:18.862  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:23:18.864  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4915699b: startup date [Fri Feb 07 12:23:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:19.638  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:23:19.638  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:23:19.639  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:23:19.703  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:23:19.705  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 841 ms
+2020-02-07 12:23:19.752  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:23:19.753  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:23:19.753  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:23:19.753  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:23:19.753  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:23:19.754  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:23:20.131  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4915699b: startup date [Fri Feb 07 12:23:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:20.141  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:23:20.142  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:23:20.142  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:23:20.142  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:23:20.143  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:23:20.144  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:23:20.144  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:23:20.144  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:23:20.145  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:23:20.145  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:23:20.145  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:23:20.146  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:23:20.154  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:20.155  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:20.161  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:23:20.165  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:20.439  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:23:20.472  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:23:20.480  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:23:20.480  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:23:20 GMT+08:00 2020
+2020-02-07 12:23:20.493  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:23:20.494  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.684 seconds (JVM running for 104.533)
+2020-02-07 12:23:26.708  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:23:26.709  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:23:26.709  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:23:26.709  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:23:26.710  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:23:26.751  INFO 18944 --- [pool-7-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:23:26 GMT+08:00 2020
+2020-02-07 12:23:43.675  INFO 18944 --- [Thread-40] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4915699b: startup date [Fri Feb 07 12:23:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:43.677  INFO 18944 --- [Thread-40] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:23:45.103  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:23:45.103  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:23:45.106  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ac09c47: startup date [Fri Feb 07 12:23:45 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:45.915  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:23:45.915  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:23:45.915  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:23:45.963  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:23:45.965  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 859 ms
+2020-02-07 12:23:45.994  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:23:45.994  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:23:45.994  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:23:45.994  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:23:45.995  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:23:45.995  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:23:46.147  WARN 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'profileController': Unsatisfied dependency expressed through field 'questionService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'top.hiasenna.community.service.QuestionService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-02-07 12:23:46.148  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-07 12:23:46.157  INFO 18944 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-02-07 12:23:46.301 ERROR 18944 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field questionService in top.hiasenna.community.controller.ProfileController required a bean of type 'top.hiasenna.community.service.QuestionService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'top.hiasenna.community.service.QuestionService' in your configuration.
+
+2020-02-07 12:23:49.565  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:23:49.565  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:23:49.567  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56e27e65: startup date [Fri Feb 07 12:23:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:50.255  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:23:50.255  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:23:50.256  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:23:50.305  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:23:50.305  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 738 ms
+2020-02-07 12:23:50.339  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:23:50.340  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:23:50.340  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:23:50.340  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:23:50.340  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:23:50.340  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:23:50.616  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56e27e65: startup date [Fri Feb 07 12:23:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:23:50.626  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:23:50.626  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:23:50.627  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:23:50.627  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:23:50.640  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:23:50.640  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:23:50.641  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2020-02-07 12:23:50.641  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:23:50.641  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:23:50.642  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:23:50.642  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:23:50.642  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:23:50.643  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:23:50.653  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:50.653  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:50.660  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:23:50.664  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:23:50.913  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:23:50.997  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:23:51.029  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:23:51.032  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:23:51 GMT+08:00 2020
+2020-02-07 12:23:51.053  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:23:51.056  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.533 seconds (JVM running for 135.094)
+2020-02-07 12:23:57.348  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:23:57.348  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:23:57.348  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:23:57.348  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:23:57.348  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:23:57.391  INFO 18944 --- [pool-9-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:23:57 GMT+08:00 2020
+2020-02-07 12:24:45.923  INFO 18944 --- [Thread-47] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56e27e65: startup date [Fri Feb 07 12:23:49 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:24:45.925  INFO 18944 --- [Thread-47] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:24:47.448  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:24:47.448  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:24:47.450  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@44f62f41: startup date [Fri Feb 07 12:24:47 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:24:48.305  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:24:48.305  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:24:48.305  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:24:48.357  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:24:48.358  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 908 ms
+2020-02-07 12:24:48.387  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:24:48.388  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:24:48.388  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:24:48.388  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:24:48.388  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:24:48.388  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:24:48.559  WARN 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'questionService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'top.hiasenna.community.service.QuestionService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-02-07 12:24:48.560  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-07 12:24:48.568  INFO 18944 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-02-07 12:24:48.680 ERROR 18944 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field questionService in top.hiasenna.community.controller.IndexController required a bean of type 'top.hiasenna.community.service.QuestionService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'top.hiasenna.community.service.QuestionService' in your configuration.
+
+2020-02-07 12:25:04.064  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:25:04.064  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:25:04.066  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c03a0a7: startup date [Fri Feb 07 12:25:04 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:25:04.685  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:25:04.685  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:25:04.685  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:25:04.733  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:25:04.734  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 668 ms
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:25:04.762  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:25:04.909  WARN 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'indexController' defined in file [F:\java-study\code\target\classes\top\hiasenna\community\controller\IndexController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect bean class [top.hiasenna.community.controller.IndexController] for resource metadata: could not find class that it depends on
+2020-02-07 12:25:04.909  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-07 12:25:04.916  INFO 18944 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-02-07 12:25:04.923 ERROR 18944 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'indexController' defined in file [F:\java-study\code\target\classes\top\hiasenna\community\controller\IndexController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect bean class [top.hiasenna.community.controller.IndexController] for resource metadata: could not find class that it depends on
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at top.hiasenna.community.CommunityApplication.main(CommunityApplication.java:14) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_171]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+Caused by: java.lang.IllegalStateException: Failed to introspect bean class [top.hiasenna.community.controller.IndexController] for resource metadata: could not find class that it depends on
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:344) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:992) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Ltop/hiasenna/community/service/QuestionService;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_171]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583) ~[na:1.8.0_171]
+	at java.lang.Class.getDeclaredFields(Class.java:1916) ~[na:1.8.0_171]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:715) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:656) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:361) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:340) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: top.hiasenna.community.service.QuestionService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_171]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_171]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_171]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_171]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:151) ~[spring-boot-devtools-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_171]
+	... 30 common frames omitted
+
+2020-02-07 12:26:01.967  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:26:01.967  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:26:01.969  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5211414e: startup date [Fri Feb 07 12:26:01 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:26:02.645  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:26:02.645  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:26:02.645  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:26:02.697  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:26:02.698  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 729 ms
+2020-02-07 12:26:02.743  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:26:02.744  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:26:02.744  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:26:02.745  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:26:02.745  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:26:02.745  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:26:03.032  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5211414e: startup date [Fri Feb 07 12:26:01 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:26:03.043  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:26:03.043  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:26:03.044  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:26:03.044  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:26:03.045  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:26:03.045  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:26:03.046  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2020-02-07 12:26:03.046  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:26:03.047  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:26:03.047  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:26:03.048  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:26:03.049  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:26:03.049  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:26:03.062  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:26:03.062  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:26:03.069  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:26:03.074  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:26:03.347  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:26:03.401  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:26:03.411  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:26:03.412  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:26:03 GMT+08:00 2020
+2020-02-07 12:26:03.429  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:26:03.432  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.504 seconds (JVM running for 267.47)
+2020-02-07 12:26:08.559  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:26:08.560  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:26:08.560  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:26:08.560  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:26:08.560  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:26:08.602  INFO 18944 --- [pool-11-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:26:08 GMT+08:00 2020
+2020-02-07 12:26:59.688  INFO 18944 --- [Thread-57] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5211414e: startup date [Fri Feb 07 12:26:01 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:26:59.690  INFO 18944 --- [Thread-57] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:27:01.744  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 18944 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:27:01.744  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:27:01.746  INFO 18944 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5bc96c74: startup date [Fri Feb 07 12:27:01 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:27:02.782  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:27:02.784  INFO 18944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:27:02.784  INFO 18944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:27:02.855  INFO 18944 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:27:02.856  INFO 18944 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1110 ms
+2020-02-07 12:27:02.904  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:27:02.905  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:27:02.905  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:27:02.905  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:27:02.905  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:27:02.905  INFO 18944 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:27:03.212  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5bc96c74: startup date [Fri Feb 07 12:27:01 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:27:03.222  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:27:03.222  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:27:03.223  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:27:03.223  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:27:03.223  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:27:03.224  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:27:03.224  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2020-02-07 12:27:03.224  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:27:03.225  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:27:03.225  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:27:03.226  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:27:03.228  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:27:03.228  INFO 18944 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:27:03.239  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:03.239  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:03.253  INFO 18944 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:27:03.260  INFO 18944 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:03.530  INFO 18944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:27:03.571  INFO 18944 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:27:03.581  INFO 18944 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:27:03.582  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:27:03 GMT+08:00 2020
+2020-02-07 12:27:03.597  INFO 18944 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:27:03.599  INFO 18944 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 1.909 seconds (JVM running for 327.638)
+2020-02-07 12:27:07.958  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:27:07.958  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:27:07.959  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:27:07.959  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:27:07.959  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:27:08.000  INFO 18944 --- [pool-13-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:27:08 GMT+08:00 2020
+2020-02-07 12:27:18.650  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 3864 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:27:18.651  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:27:18.894  INFO 3864 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d69cf7c: startup date [Fri Feb 07 12:27:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:27:21.559  INFO 3864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:27:21.575  INFO 3864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:27:21.577  INFO 3864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:27:21.784  INFO 3864 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:27:21.784  INFO 3864 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2895 ms
+2020-02-07 12:27:21.979  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:27:21.980  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:27:21.984  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:27:21.985  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:27:21.985  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:27:21.986  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:27:23.351  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d69cf7c: startup date [Fri Feb 07 12:27:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:27:23.470  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:27:23.471  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:27:23.473  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:27:23.473  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:27:23.474  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:27:23.475  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:27:23.477  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2020-02-07 12:27:23.479  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:27:23.482  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:27:23.485  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:27:23.486  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:27:23.487  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:27:23.489  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:27:23.552  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:23.553  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:23.576  INFO 3864 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:27:23.606  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:27:25.164  INFO 3864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:27:25.221  INFO 3864 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:27:25.237  INFO 3864 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-07 12:27:25.243  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule start Fri Feb 07 12:27:25 GMT+08:00 2020
+2020-02-07 12:27:25.303  INFO 3864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:27:25.308  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 7.041 seconds (JVM running for 10.41)
+2020-02-07 12:27:25.616  INFO 3864 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-07 12:27:25.617  INFO 3864 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-07 12:27:25.679  INFO 3864 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
+2020-02-07 12:27:28.648  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:6
+2020-02-07 12:27:28.649  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:7
+2020-02-07 12:27:28.649  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:8
+2020-02-07 12:27:28.649  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:9
+2020-02-07 12:27:28.649  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : list question:10
+2020-02-07 12:27:28.691  INFO 3864 --- [pool-1-thread-1] t.h.community.schedule.HotTagTasks       : hotTagSchedule stop Fri Feb 07 12:27:28 GMT+08:00 2020
+2020-02-07 12:28:19.955  INFO 3864 --- [Thread-20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d69cf7c: startup date [Fri Feb 07 12:27:18 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:28:19.957  INFO 3864 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-07 12:28:21.648  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : Starting CommunityApplication on LAPTOP-L0GNTSJI with PID 3864 (F:\java-study\code\target\classes started by zhanghaoyu in F:\java-study\code)
+2020-02-07 12:28:21.649  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-02-07 12:28:21.651  INFO 3864 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70e3cb0c: startup date [Fri Feb 07 12:28:21 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:28:22.493  INFO 3864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8887 (http)
+2020-02-07 12:28:22.494  INFO 3864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-07 12:28:22.494  INFO 3864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-02-07 12:28:22.555  INFO 3864 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-07 12:28:22.556  INFO 3864 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 905 ms
+2020-02-07 12:28:22.605  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-07 12:28:22.606  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-02-07 12:28:22.606  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-07 12:28:22.606  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-02-07 12:28:22.606  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-02-07 12:28:22.606  INFO 3864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-02-07 12:28:23.054  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70e3cb0c: startup date [Fri Feb 07 12:28:21 GMT+08:00 2020]; root of context hierarchy
+2020-02-07 12:28:23.067  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callback],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.callback(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:28:23.068  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.AuthorizeController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-07 12:28:23.068  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{id}],methods=[GET]}" onto public top.hiasenna.community.dto.ResultDTO<java.util.List> top.hiasenna.community.controller.CommentController.comments(java.lang.Long)
+2020-02-07 12:28:23.069  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment],methods=[POST]}" onto public java.lang.Object top.hiasenna.community.controller.CommentController.post(top.hiasenna.community.dto.CommentCreateDTO,javax.servlet.http.HttpServletRequest)
+2020-02-07 12:28:23.069  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView top.hiasenna.community.controller.CustomizeErrorController.errorHtml(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:28:23.069  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/upload]}" onto public top.hiasenna.community.dto.FileDTO top.hiasenna.community.controller.FileController.upload(javax.servlet.http.HttpServletRequest)
+2020-02-07 12:28:23.070  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.IndexController.index(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2020-02-07 12:28:23.070  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notification/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.NotificationController.profile(javax.servlet.http.HttpServletRequest,java.lang.Long)
+2020-02-07 12:28:23.071  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile/{action}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.ProfileController.profile(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.Model,java.lang.Integer,java.lang.Integer)
+2020-02-07 12:28:23.071  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.publish(org.springframework.ui.Model)
+2020-02-07 12:28:23.071  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish],methods=[POST]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.doPublish(java.lang.String,java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+2020-02-07 12:28:23.072  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/publish/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.PublishController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:28:23.073  INFO 3864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/question/{id}],methods=[GET]}" onto public java.lang.String top.hiasenna.community.controller.QuestionController.question(java.lang.Long,org.springframework.ui.Model)
+2020-02-07 12:28:23.085  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:28:23.085  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:28:23.098  INFO 3864 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in customizeExceptionHandler
+2020-02-07 12:28:23.106  INFO 3864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-02-07 12:28:23.529  INFO 3864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-07 12:28:23.578  INFO 3864 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-07 12:28:23.605  INFO 3864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8887 (http)
+2020-02-07 12:28:23.610  INFO 3864 --- [restartedMain] t.h.community.CommunityApplication       : Started CommunityApplication in 2.037 seconds (JVM running for 68.713)

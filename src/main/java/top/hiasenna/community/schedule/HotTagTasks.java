@@ -47,7 +47,6 @@ public class HotTagTasks {
                         priorities.put(tag, 5 + question.getCommentCount());
                     }
                 }
-                log.info("list question:{}", question.getId());
             }
 
             offset += limit;

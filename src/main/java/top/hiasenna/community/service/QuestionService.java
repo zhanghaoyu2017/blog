@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import top.hiasenna.community.dto.PaginationDTO;
 import top.hiasenna.community.dto.QuestionDTO;
 import top.hiasenna.community.dto.QuestionQueryDTO;
+import top.hiasenna.community.enums.SortEnum;
 import top.hiasenna.community.exception.CustomizeErrorCode;
 import top.hiasenna.community.exception.CustomizeException;
 import top.hiasenna.community.mapper.QuestionExtMapper;
@@ -39,10 +40,15 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
-    public PaginationDTO list(String search, String tag, Integer page, Integer size) {
+    public PaginationDTO list(String search, String tag, String sort,Integer page, Integer size) {
         if (StringUtils.isNotBlank(search)) {
             String[] tags = StringUtils.split(search, "");
-            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+            search = Arrays
+                    .stream(tags)
+                    .filter(StringUtils::isNotBlank)
+                    .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                    .filter(StringUtils::isNotBlank)
+                    .collect(Collectors.joining("|"));
 
         }
         Integer totalPage;
@@ -52,6 +58,19 @@ public class QuestionService {
         if (StringUtils.isNotBlank(tag)) {
             tag = tag.replace("+", "").replace("*", "").replace("?", "");
             questionQueryDTO.setTag(tag);
+        }
+        for (SortEnum sortEnum : SortEnum.values()) {
+            if (sortEnum.name().toLowerCase().equals(sort)) {
+                questionQueryDTO.setSort(sort);
+
+                if (sortEnum == SortEnum.HOT7) {
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 7);
+                }
+                if (sortEnum == SortEnum.HOT30) {
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 30);
+                }
+                break;
+            }
         }
         Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
         if (totalCount % size == 0) {
